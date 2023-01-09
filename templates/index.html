@@ -1,0 +1,186 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.urls import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+
+<!-- Hero -->
+<!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ]
+  }
+  ```
+-->
+<div class="page">
+  <div class="head">
+      <div class="head-all-txt">
+          <h3 class="header-txt">WE GOT WHAT YOU NEED!</h3>
+          <p class="head-txt">A Discovery Program with Talent Accelerator, Startup Incubator, grab your chance to be with us in your entrepreneurship track</p>
+          <div>
+              <a type="submit" href="/register" class="head-btn cursor-pointer block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 hover:no-underline focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"></a>><p class="btn-txt">Get Started</p>
+          </div>
+          <p class="head-sub-txt">Over 40% of Students across India and 500+ companies use Skillassure</p>
+      </div>
+      <div class="head-img">
+          <img src="/lms/static/Assests/vector/model.svg">
+      </div>
+  </div>
+  <div class="content">
+      <div class="cont-headtxt">
+          <h1 >Measure Candidate skills, Competency and Ability</h1>
+      </div>
+      <div class="content-grid">
+          <div class="content-row">
+              <div class="cont-card">
+                  <img class="card-logo" src="/lms/static/Assests/vector/card-vector.svg">
+                  <p class="card-headtxt">Aptitude</p>
+                  <p class="card-subtxt">Aptitude found in the understanding and is often inherited. Genius coming from reason and imagination, rarely.</p>
+              </div>
+              <div class="cont-card">
+                  <img class="card-logo" src="/lms/static/Assests/vector/card-vector.svg">
+                  <p class="card-headtxt">Aptitude</p>
+                  <p class="card-subtxt">Aptitude found in the understanding and is often inherited. Genius coming from reason and imagination, rarely.</p>
+              </div>
+              <div class="cont-card">
+                  <img class="card-logo" src="/lms/static/Assests/vector/card-vector.svg">
+                  <p class="card-headtxt">Aptitude</p>
+                  <p class="card-subtxt">Aptitude found in the understanding and is often inherited. Genius coming from reason and imagination, rarely.</p>
+              </div>
+          </div>
+          <div class="content-row">
+              <div class="cont-card">
+                  <img class="card-logo" src="/lms/static/Assests/vector/card-vector.svg">
+                  <p class="card-headtxt">Aptitude</p>
+                  <p class="card-subtxt">Aptitude found in the understanding and is often inherited. Genius coming from reason and imagination, rarely.</p>
+              </div>
+              <div class="cont-card">
+                  <img class="card-logo" src="/lms/static/Assests/vector/card-vector.svg">
+                  <p class="card-headtxt">Aptitude</p>
+                  <p class="card-subtxt">Aptitude found in the understanding and is often inherited. Genius coming from reason and imagination, rarely.</p>
+              </div>
+              <div class="cont-card">
+                  <img class="card-logo" src="/lms/static/Assests/vector/card-vector.svg">
+                  <p class="card-headtxt">Aptitude</p>
+                  <p class="card-subtxt">Aptitude found in the understanding and is often inherited. Genius coming from reason and imagination, rarely.</p>
+              </div>
+          </div>
+          <div class="content-row">
+              <div class="cont-card">
+                  <img class="card-logo" src="/lms/static/Assests/vector/card-vector.svg">
+                  <p class="card-headtxt">Aptitude</p>
+                  <p class="card-subtxt">Aptitude found in the understanding and is often inherited. Genius coming from reason and imagination, rarely.</p>
+              </div>
+              <div class="cont-card">
+                  <img class="card-logo" src="/lms/static/Assests/vector/card-vector.svg">
+                  <p class="card-headtxt">Aptitude</p>
+                  <p class="card-subtxt">Aptitude found in the understanding and is often inherited. Genius coming from reason and imagination, rarely.</p>
+              </div>
+              <div class="cont-card">
+                  <img class="card-logo" src="/lms/static/Assests/vector/card-vector.svg">
+                  <p class="card-headtxt">Aptitude</p>
+                  <p class="card-subtxt">Aptitude found in the understanding and is often inherited. Genius coming from reason and imagination, rarely.</p>
+              </div>
+          </div>
+      </div>
+      <div class="cont-subheadtxt">
+          <h1 class="cont-subheadtxt-ln1">It’s not a pipeline problem.</h1>
+          <h1 class="cont-subheadtxt-ln2">It’s a spotlight problem.</h1>
+      </div>
+      <div class="cont-nav">
+          <p class="cont-nav-txt">Prep</p>
+          <p class="cont-nav-txt">Assess</p>
+          <p class="cont-nav-txt">Interview</p>
+      </div>
+      <div class="sub-cont">
+          <div class="mid-overlay">
+              <img class="verline1" src="/lms/static/Assests/vector/verline1.svg">
+              <img class="eclipse1" src="/lms/static/Assests/vector/Ellipse1.svg">
+              <img class="mo-header" src="/lms/static/Assests/vector/joinskillassure.svg">
+              <div class="mo-txt">
+                  <p class="mo-title">Explore and expand your skills.</p>
+                  <p class="mo-desc">Every idea has a first line of code. Prep for jobs and sharpen your skills alongside a global community of developers. Access the content you need to develop new skills – and land the job you’ve dreamed of.</p>
+              </div>
+              <div class="mo-img">
+                  <img src="/lms/static/Assests/vector/mid-overlay-img.png">
+              </div>
+          </div> 
+          <div class="sub-cont-grid">
+              <div class="sub-cont-row">
+                  <div class="sub-cont-row-pnt">
+                      <svg class="ellipse" height="40" width="40">
+                          <circle cx="20" cy="20" r="19" stroke="#D0D5DD" stroke-width="2" fill="none"/>
+                      </svg> 
+                      <img class="horline" src="/lms/static/Assests/vector/horline.png">
+                      <div class="sub-cont-row-txt">
+                          <p class="sub-cont-row-headtxt">Leave the binary tree behind.</p>
+                          <p class="sub-cont-row-subtxt">Build coding questions using our library of dev-friendly content that challenges them to solve the problems they’d actually tackle on the job.</p>
+                      </div>                         
+                  </div>
+                  <img class="sub-cont-row-img" src="/lms/static/Assests/vector/binarytree.jpg">
+              </div>
+              <div class="sub-cont-row">
+                  <div class="sub-cont-row-pnt">
+                      <svg class="ellipse" height="40" width="40">
+                          <circle cx="20" cy="20" r="19" stroke="#D0D5DD" stroke-width="2" fill="none"/>
+                      </svg> 
+                      <img class="horline" src="/lms/static/Assests/vector/horline.png">
+                      <div class="sub-cont-row-txt">
+                          <p class="sub-cont-row-headtxt">Focus on what really matters: the code.</p>
+                          <p class="sub-cont-row-subtxt">Build skill-centered screening with the tech problems a developer would encounter on the job — and hire the team behind your next big idea.</p>
+                      </div>                         
+                  </div>
+                  <img class="sub-cont-row-img" src="/lms/static/Assests/vector/focus.jpg">
+              </div>
+              <div class="sub-cont-row">
+                  <div class="sub-cont-row-pnt">
+                      <svg class="ellipse">
+                          <circle cx="20" cy="20" r="19" stroke="#D0D5DD" stroke-width="2" fill="none"/>
+                      </svg> 
+                      <img class="horline" src="/lms/static/Assests/vector/horline.png">
+                      <div class="sub-cont-row-txt">
+                          <p class="sub-cont-row-headtxt">Identify Your Score </p>
+                          <p class="sub-cont-row-subtxt">Identify your score and get connected  them to meet your team using data-driven decisions that help level the playing field for developers everywhere.</p>
+                      </div>                         
+                  </div>
+                  <img class="sub-cont-row-img" src="/lms/static/Assests/vector/identify.jpg">
+              </div>
+          </div>
+          <div class="sub-cont-endtxt">
+              <p>:: Interview ::</p>
+          </div>
+          <div class="coding-img">
+              <img src="/lms/static/Assests/vector/coding.jpg"
+          </div>
+          <div>
+              <svg class="verline2" width="2" height="521" viewBox="0 0 2 521" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 0V521" stroke="#D0D5DD" stroke-width="2"/>
+              </svg>
+              <img class="verline3" src="/lms/static/Assests/vector/verline3.svg">
+              <img class="Lline" src="/lms/static/Assests/vector/Lline.svg">
+              <svg class="ellipse2" height="40" width="40">
+                  <circle cx="20" cy="20" r="19" stroke="#D0D5DD" stroke-width="2" fill="none"/>
+              </svg> 
+          </div>
+      </div>
+  </div>
+  <div class="clients">
+      <p class="clients-head">Our Clients</p>
+      <img class="clients-img" src="/lms/static/Assests/vector/clients.jpg">
+  </div>
+</div>
+  
